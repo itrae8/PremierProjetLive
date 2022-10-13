@@ -1,0 +1,19 @@
+<!--<app-premier
+  *ngFor="let personne of personnes"
+  [personne]="personne"
+  (renommageEvent)="renommerPersonne(personne, $event)"
+  [ngStyle]="{color: 'rgb(0, ' + personne.color + ', 0)'}"
+></app-premier>-->
+
+<table>
+    <tr>
+        <th>Nom</th>
+        <th>Age</th>
+    </tr>
+    <tr *ngFor="let personne of personnes">
+        <td class="lien-detail-personne" (click)="ouvertureDetailPersonne(personne.nom)">{{personne.nom}}</td>
+        <td>{{personne.age}}</td>
+    </tr>
+</table>
+
+<router-outlet></router-outlet>

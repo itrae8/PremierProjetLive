@@ -1,0 +1,16 @@
+<h1 appHighlight>{{'Infos sur la personne' | uppercase}}</h1>
+<p>{{personne.nom | lowercase}}</p>
+<p [ngClass]="{'rouge': personne.age < 30, 'bleu': personne.age >= 30}">La personne a {{personne.age}} ans</p>
+<p>Elle est née le {{personne.dateDeNaissance | date: 'à HH:mm, le d MMMM yyyy' | uppercase}}</p>
+
+<input [(ngModel)]="nomFormulaire">
+<button (click)="renommerPersonne()">Renommer</button>
+
+<!--<img  [src]="imgUrl" [title]="nom">-->
+
+<p>Nombre de clicks : {{nbrClick ? nbrClick : 'Pas encore de click'}}</p>
+<button (click)="incrementNbrClick($event)">Vas y clique !</button>
+
+<!--<input [(ngModel)]="inputValue">
+<input [ngModel]="inputValue" (ngModelOnChange)="inputValue = $event">
+{{inputValue}}-->
