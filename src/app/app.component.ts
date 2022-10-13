@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Personne } from 'src/app/core/model/personne.model';
-import { PersonneService } from './core/services/personne.service';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +12,13 @@ export class AppComponent {
   valeursTemplate = {
     valeurs: {
       nom: 'templateTest',
-      chiffre: 5
-    }
+      chiffre: 5,
+    },
   };
+
+  interval$ = interval(1000);
+
+  ngOnInit(){
+
+  }
 }

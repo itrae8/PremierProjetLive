@@ -1,2 +1,6 @@
-<p>Nombre de clicks : {{nbrClick ? nbrClick : 'Pas encore de click'}}</p>
-<button (click)="incrementNbrClick($event)">Vas y clique !</button>
+<!--<p>Nombre de clicks : {{nbrClick ? nbrClick : 'Pas encore de click'}}</p>
+<button (click)="incrementNbrClick($event)">Vas y clique !</button>-->
+
+<h1>{{ interval$ | async }}</h1>
+
+<button (click)="activerOuReinitTimer()">Activer ou reinit timer</button>
